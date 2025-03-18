@@ -1,0 +1,88 @@
+.residents {
+    width: 100%;
+    max-width: 15em;
+    border-radius: 0.8em;
+    overflow: hidden;
+    background-color: #083b42;
+    position: relative;
+    color: white;
+    transition: transform 200ms ease, 
+                box-shadow 200ms ease;
+}
+
+.residents:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 1.5em #0008;
+}
+
+.residents__status{
+    position: absolute;
+    top: 3%;
+    background-color: #083b42;
+    width: 40%;
+    display: flex;
+    gap: 0.8em;
+    align-items: center;
+    padding: 0.4em 0.6em;
+    border-radius: 0 0.6em 0.6em 0;
+    
+}
+
+.residents__status-circle {
+    width: 0.6em;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color:#999;
+}
+
+.residents__status > .Dead {
+    background-color: rgb(167, 24, 24);
+}
+
+.residents__status > .Alive {
+    background-color: rgb(9, 153, 9);
+}
+
+.residents__status-value {
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+.residents__body {
+    padding: 1em 1em 2em;
+}
+
+.residents__name {
+    text-align: center;
+    margin-bottom: 0.6em;
+}
+
+.residents__separator {
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    border-color: #7777;
+}
+
+.residetns__stats {
+    display: grid;
+    gap: 0.6em;
+}
+
+.residents__stat__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+.residents__stat_label {
+    font-size: 0.9em;
+    color: #999;
+    padding-left: 1em;
+    font-weight: 300;
+}
+
+
+
+
+
+
