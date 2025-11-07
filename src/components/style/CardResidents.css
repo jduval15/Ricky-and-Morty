@@ -63,7 +63,7 @@
     border-color: #7777;
 }
 
-.residetns__stats {
+.residents__stats {
     display: grid;
     gap: 0.6em;
 }
@@ -74,11 +74,16 @@
     gap: 0.3em;
 }
 
-.residents__stat_label {
+.residents__stat__label {
     font-size: 0.9em;
     color: #999;
     padding-left: 1em;
     font-weight: 300;
+}
+
+.residents__stat__value {
+    padding-left: 1em;
+    font-weight: 500;
 }
 
 
