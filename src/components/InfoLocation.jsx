@@ -12,7 +12,7 @@ const InfoLocation = ({location}) => {
           <span className='location__label'>Dimension</span>
           <span className='location__value'>{location?.dimension}</span></li>
           <li className='location__item'>
-          <span className='location__label'>Populations</span>
+          <span className='location__label'>Population</span>
           <span className='location__value'>{location?.residents.length}</span></li>
           </ul>
       </article>

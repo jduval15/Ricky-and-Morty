@@ -19,14 +19,20 @@ function App() {
 
   useEffect(() => {
     getLocation()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [locationId])
+  }, [getLocation])
 
   const inputLocation = useRef()
 
   const handleLocation = e => {
     e.preventDefault()
-    SetLocationId(inputLocation.current.value.trim())
+    const value = inputLocation.current.value.trim()
+    const numValue = parseInt(value)
+
+    if (value === '' || isNaN(numValue) || numValue < 1 || numValue > 126) {
+      SetLocationId('0')
+    } else {
+      SetLocationId(numValue)
+    }
   }
 
   return (
@@ -47,15 +53,19 @@ function App() {
           ? <h2> Hey! you must provide an id from 1 to 126</h2>
           : (
             <>
-              < InfoLocation location = {location} />      
+              < InfoLocation location = {location} />
               <div className='app__card__container'>
                 {
-                  location?.residents.map(url => (
-                    < CardResidents
-                        key={url} 
-                        url={url}
-                    />
-                  ))
+                  location?.residents && location.residents.length > 0 ? (
+                    location.residents.map(url => (
+                      < CardResidents
+                          key={url}
+                          url={url}
+                      />
+                    ))
+                  ) : (
+                    <h2>This location has no residents</h2>
+                  )
                 }
                 <Footer/>
               </div>

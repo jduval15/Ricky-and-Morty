@@ -12,7 +12,7 @@ const Footer = () => {
                         <a href="#Home">Home</a>
                     </li>
                     <li>
-                        <a href="Contact" target='_blank'>Contact</a>
+                        <a href="#Contact">Contact</a>
                     </li>
                 </ul>
                 <ul className='footer__contact footer__icon '>
